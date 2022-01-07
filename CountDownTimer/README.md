@@ -23,10 +23,11 @@
 
 ## Improvements
 
-1- Possible to automate other count down timers ex: Special Timers  
+1- Possible to automate other count down timers ex: Special Timers
 2- Adding other TestNg Listeners like IReporter
 3- Capturing screenshot on failure
 4- Adding more utility classes to handle reading data from excel,csv file etc..
 5- Adding separate class for verification (soft & Hard assertion)
 6- Adding utility class if required Data base verification.
+
 
