@@ -29,5 +29,5 @@
 4- Adding more utility classes to handle reading data from excel,csv file etc..
 5- Adding separate class for verification (soft & Hard assertion)
 6- Adding utility class if required Data base verification.
-
+7- Driver .exe files either referred to explicitly file or we can use webdriver manager class.
 
