@@ -13,8 +13,8 @@ import com.countdown.utility.GetLocator;
 public class CountDownHomePage 
 {
 	private WebDriver driver = null;
-	ArrayList<String> locator = new ArrayList<>();
-	WebElement element = null;
+	private ArrayList<String> locator = new ArrayList<>();
+	private WebElement element = null;
 	
 	public CountDownHomePage(WebDriver driver) 
 	{

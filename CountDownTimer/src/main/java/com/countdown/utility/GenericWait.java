@@ -13,7 +13,7 @@ import com.google.common.base.Function;
 
 public class GenericWait 
 {
-static WebDriverWait driver = null;
+   private static WebDriverWait driver = null;
 	
 	
 	public static WebElement waitForAnELement(WebDriver driver, String property, String propertyValue)

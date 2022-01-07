@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 public class FindLocators 
 {
-	static By by = null;
+	private static By by = null;
 		
 	public static By getLocators(String property, String propertyValue)
 	{

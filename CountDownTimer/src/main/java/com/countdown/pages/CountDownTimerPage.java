@@ -17,9 +17,9 @@ import com.countdown.utility.GetLocator;
 public class CountDownTimerPage 
 {
 	private WebDriver driver = null;
-	ArrayList<String> locator = new ArrayList<>();
-	LinkedHashSet<Integer> lhs = new  LinkedHashSet<>();
-	WebElement element = null;
+	private ArrayList<String> locator = new ArrayList<>();
+	private LinkedHashSet<Integer> lhs = new  LinkedHashSet<>();
+	private WebElement element = null;
 	
 	public CountDownTimerPage(WebDriver driver) 
 	{

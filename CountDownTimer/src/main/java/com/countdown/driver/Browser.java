@@ -9,8 +9,8 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class Browser 
 {
-	ThreadLocal<WebDriver> threadLocal = new ThreadLocal<>();
-	WebDriver driver = null;
+	private ThreadLocal<WebDriver> threadLocal = new ThreadLocal<>();
+	private WebDriver driver = null;
 	
 	
 	/***

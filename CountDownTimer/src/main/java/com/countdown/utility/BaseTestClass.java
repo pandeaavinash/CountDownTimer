@@ -8,8 +8,8 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 public class BaseTestClass extends Browser
 {
-	ExtentTest test = null;
-	WebDriver driver = null;
+	private ExtentTest test = null;
+	private WebDriver driver = null;
 	/***
 	 * Set and get the browser instance
 	 * @param browserName Name of browser e.g. ff or firefox
