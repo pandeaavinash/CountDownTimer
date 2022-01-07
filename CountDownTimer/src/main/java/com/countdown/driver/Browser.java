@@ -23,7 +23,7 @@ public class Browser
 		if(browser.toLowerCase().equalsIgnoreCase("ff") || browser.equalsIgnoreCase("firefox"))
 		{
 			 System.setProperty("webdriver.gecko.driver",
-		                "C:\\Users\\Avinash\\Downloads\\geckodriver_v30\\geckodriver.exe");
+		                "./src/test/resources/driver/geckodriver.exe");
 		 
 		        driver = new FirefoxDriver();
 		 
