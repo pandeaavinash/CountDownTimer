@@ -14,5 +14,5 @@
 
 1 you need to run the testng.xml file present at project level. It call indirectly TestRunner class
 
-2 Change the tags as per your execution 
+2 Change the tags as per your execution  
 
