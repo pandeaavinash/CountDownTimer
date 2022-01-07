@@ -37,9 +37,9 @@ public class TestHooks
 		try
 		{
 			if(sc.isFailed())
-				test.log(LogStatus.PASS, "Test Passed!!");
-			else
 				test.log(LogStatus.FAIL, "Test gets Failed!!");
+			else
+				test.log(LogStatus.PASS, "Test Passed!!");
 			
 			
 			ExtentReport.endTest();
