@@ -26,7 +26,7 @@ public class CountDownTimeSteps extends BaseTestClass
 	CountDownHomePage obj_CountDownHomePage = null;
 	CountDownTimerPage obj_CountDownTimerPage = null;
 	ExtentTest test = ExtentReport.test;
-	
+	private int time = 0;
 	
 	
 	@Given("Navigate to eggtimer url")
@@ -46,10 +46,11 @@ public class CountDownTimeSteps extends BaseTestClass
 	}
 	
 	
-	@When("user enter the time in seconds in given text box")
-	public void user_enter_the_time_in_seconds_in_given_text_box() {
-		obj_CountDownHomePage.enterATime(10);
-		test.log(LogStatus.PASS, "Enter time as 25-sec");
+	@When("user enter the time as {int} seconds in given text box")
+	public void user_enter_the_time_as_seconds_in_given_text_box(Integer time) {
+		this.time = time;
+		obj_CountDownHomePage.enterATime(time);
+		test.log(LogStatus.PASS, "Enter time as "+time+" -sec");
 	}
 	
 	
@@ -61,10 +62,27 @@ public class CountDownTimeSteps extends BaseTestClass
 	
 	
 	@Then("Count Timer should gets starts and it should decrement by {int}-sec")
-	public void count_timer_should_gets_starts_and_it_should_decrement_by_sec(Integer int1) {
+	public void count_timer_should_gets_starts_and_it_should_decrement_by_sec(Integer ti) {
 		obj_CountDownTimerPage = new CountDownTimerPage(driver);
-	    obj_CountDownTimerPage.VerifyCountDownTimer(10);
+	    obj_CountDownTimerPage.VerifyCountDownTimer(time);
 	    test.log(LogStatus.PASS, "Verified count down timer decrements by 1");
+	}
+	
+	//Simple Parameter
+	@When("user enter the time <{int}> seconds in given text box")
+	public void user_enter_the_time_seconds_in_given_text_box(Integer time) {
+		this.time = time;
+		obj_CountDownHomePage.enterATime(time);
+		test.log(LogStatus.PASS, "Enter time as "+time+" sec");
+	}
+	
+	
+	@When("user enter the time {string} seconds in given text box")
+	public void user_enter_the_time_seconds_in_given_text_box(String time) {
+		System.out.println(time);
+		this.time = Integer.parseInt(time);
+		obj_CountDownHomePage.enterATime(this.time);
+		test.log(LogStatus.PASS, "Enter time as "+time+" sec");
 	}
 	
 	
