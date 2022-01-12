@@ -64,7 +64,7 @@ public class CountDownTimeSteps extends BaseTestClass
 	@Then("Count Timer should gets starts and it should decrement by {int}-sec")
 	public void count_timer_should_gets_starts_and_it_should_decrement_by_sec(Integer ti) {
 		obj_CountDownTimerPage = new CountDownTimerPage(driver);
-	    obj_CountDownTimerPage.VerifyCountDownTimer(time);
+	    obj_CountDownTimerPage.VerifyCountDownTimer(time, "seconds");
 	    test.log(LogStatus.PASS, "Verified count down timer decrements by 1");
 	}
 	
