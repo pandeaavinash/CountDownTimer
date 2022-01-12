@@ -66,4 +66,27 @@ public class CountDownHomePage
 			
 		}
 	}
+	
+	
+	/***
+	 * Select the 5-min link
+	 */
+	public void select_5MinutesLink()
+	{
+		try
+		{
+			locator = GetLocator.splitLocator(LoadProperties.MIN_5_LNK);
+			if(locator.size() > 1 )
+			{
+				element = GenericWait.waitForAnELement(driver, locator.get(0), locator.get(1));
+				if(element != null)
+					element.click();
+			}
+			locator.clear();
+		}
+		catch(Exception e)
+		{
+			System.out.println("Exception occur while clicking on 5-min link.  Exception:"+e.getMessage());
+		}
+	}
 }
